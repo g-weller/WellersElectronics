@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout - Weller's Electronics</title>
+        <link rel="stylesheet" href="../styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" id="navLogin">Sign In</a>
+                <a href="register.html" id="navRegister">Register</a>
+                <a href="cart.html" id="navCart">Cart</a>
+                <a href="#" id="navLogout">Logout</a>
+            </div>
+        </nav>
+
+        <div class="checkout-wrapper">
+            <div class="checkout-form-section">
+                <h2>Checkout</h2>
+
+                <h3>Shipping Information</h3>
+
+                <div class="delivery-options">
+                    <div class="option-box active" onclick="selectDelivery(this, 'delivery')">
+                        <span>Delivery</span>
+                    </div>
+                    <div class="option-box" onclick="selectDelivery(this, 'pickup')">
+                        <span>Pick up</span>
+                    </div>
+                </div>
+
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label>Full name *</label>
+                        <input type="text" id="fullName" placeholder="Enter full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email address *</label>
+                        <input type="email" id="email" placeholder="Enter email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone number *</label>
+                        <input type="tel" id="phone" placeholder="Enter phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Country *</label>
+                        <select id="country" required>
+                            <option value="">Choose country</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="USA">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms" style="display:inline;">I have read and agree to the Terms and
+                            Conditions.</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="checkout-summary-section">
+                <h3>Review your cart</h3>
+
+                <div id="orderSummaryList">
+                </div>
+
+                <div class="discount-row">
+                    <input type="text" id="discountCode" placeholder="Enter code (e.g., SAVE10)"> 
+                    <button type="button" onclick="applyDiscount()">Apply</button>
+                </div>
+                <p id="discountHint" style="font-size:12px; color:#3057e4; margin-bottom:20px;">
+                    *Try using **SAVE10** for a $10.00 discount!
+                </p>
+                
+                <div class="cost-line">
+                    <span>Subtotal</span>
+                    <span id="subtotalDisplay">$0.00</span>
+                </div>
+                <div class="cost-line">
+                    <span>Shipping</span>
+                    <span id="shippingDisplay">$0.00</span>
+                </div>
+                <div class="cost-line">
+                    <span>Discount</span>
+                    <span id="discountDisplay">-$0.00</span>
+                </div>
+                <div class="cost-line total">
+                    <span>Total</span>
+                    <span id="totalDisplay">$0.00</span>
+                </div>
+
+                <button class="pay-btn" onclick="processCheckout()">Pay Now</button>
+                <p style="text-align:center; margin-top:10px; font-size:12px; color:#666;">
+                </p>
+            </div>
+        </div>
+        <script src="app.js"></script>
+        <script src="checkout.js"></script>
+    </body>
+</html>
