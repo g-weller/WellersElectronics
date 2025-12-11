@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root{
-    --background-color: #ffffff;
+    --primary-blue: #3057e4; 
+    --bg-gray: #f9fafb;
+    --border-color: #e5e7eb;
 }
 
 *{
@@ -302,4 +304,189 @@ th, td{
 
 #reset button{
     height: 40px;
+}
+
+/* Utilities */
+.hidden { display: none; }
+.text-right { text-align: right; }
+
+/* Cart Page Dropdown Section */
+.cart-controls {
+    background: var(--bg-gray);
+    padding: 20px;
+    margin: 20px 50px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.cart-controls select, .cart-controls input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    height: 40px;
+}
+
+.cart-controls button {
+    margin-top: 0;
+    width: auto;
+    padding: 0 20px;
+    height: 40px;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Checkout Grid Layout */
+.checkout-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+/* Left Side: Form */
+.checkout-form-section {
+    padding: 40px;
+    background: #fff;
+}
+
+.checkout-form-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Delivery Toggle */
+.delivery-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-box {
+    flex: 1;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.option-box.active {
+    border-color: var(--primary-blue);
+    background-color: #f0f4ff;
+}
+
+/* Right Side: Summary */
+.checkout-summary-section {
+    background-color: var(--bg-gray);
+    padding: 40px;
+    border-left: 1px solid var(--border-color);
+}
+
+.summary-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.summary-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.summary-details {
+    flex: 1;
+}
+
+.summary-details h4 { font-size: 14px; margin-bottom: 4px; }
+.summary-details p { font-size: 12px; color: #666; }
+
+.discount-row {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.discount-row input { flex: 1; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px;}
+.discount-row button { 
+    margin: 0; width: auto; background: transparent; color: var(--primary-blue); 
+    border: none; font-weight: bold; cursor: pointer;
+}
+
+.cost-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.cost-line.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.pay-btn {
+    width: 100%;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 18px; 
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold; 
+    cursor: pointer;
+    margin-top: 25px; 
+    box-shadow: 0 4px 15px rgba(48, 87, 228, 0.4); 
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.pay-btn:hover {
+    filter: brightness(0.9);
+    box-shadow: 0 6px 20px rgba(48, 87, 228, 0.6); /* More pronounced shadow on hover */
+}
+
+.pay-btn:hover {
+    filter: brightness(0.9);
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .checkout-wrapper { grid-template-columns: 1fr; }
+    .checkout-summary-section { order: -1; border-left: none; border-bottom: 1px solid var(--border-color);}
 }
