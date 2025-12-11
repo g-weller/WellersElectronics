@@ -1,0 +1,58 @@
+[
+    {
+        "id": 0,
+        "name": "Lattude 3310",
+        "price": 300.00,
+        "quantity": 1
+
+    },
+
+    {
+        "id": 1,
+        "name": "Dell 14 Plus",
+        "price": 589.90,
+        "quantity": 1
+    },
+
+    {
+        "id": 2,
+        "name": "Dell 15 Laptop",
+        "price": 290.99,
+        "quantity": 1
+    },
+
+    {
+        "id": 3,
+        "name": "Inspiron 14 2-in-1 Laptop",
+        "price": 499.99,
+        "quantity": 1
+    },
+
+    {
+        "id": 4,
+        "name": "Dell Slim Desktop",
+        "price": 599.99,
+        "quantity": 1
+    },
+
+    {
+        "id": 5,
+        "name": "Dell Tower Desktop",
+        "price": 749.99,
+        "quantity": 1
+    },
+
+    {
+        "id": 6,
+        "name": "Dell Tower Desktop",
+        "price": 899.99,
+        "quantity": 1
+    },
+
+    {
+        "id": 7,
+        "name": "Dell Tower Plus Desktop",
+        "price": 899.99,
+        "quantity": 1
+    }
+]

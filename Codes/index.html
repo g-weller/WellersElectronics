@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>Weller's Electronics</title>
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" id="navLogin">Sign In</a>
+                <a href="register.html" id="navRegister">Register</a>
+                <a href="cart.html" id="navCart">Cart</a>
+                <a href="#" id="navLogout">Logout</a>
+            </div>
+        </nav>
+        <main class="container">
+            <div class="page">
+                <section id="Laptop">
+                    <h2>Laptops</h2>
+                    <div class="section">
+                        <div class="product">
+                            <img src="../Assets/Images/laptop_latitude_13_3310_gallery_3.avif" alt="">
+                            <h4>Dell Latitude 3310</h4>
+                            <p>
+                                Price: $300.00
+                                <br>Intel® Core i7 11 Gen
+                                <br>250GB SSD
+                                <br>8GB RAM
+                                <br><button type="button" onclick="addItem(0)" id="addCartBtn" class="addCT">Add to Cart</button>
+                            </p>
+                        </div>
+                        <div class="product">
+                            <img src="../Assets/Images/laptop-dell-db14250-copilot-pc-mg.avif" alt="Product Img">
+                            <h4>Dell 14 Plus</h4>
+                            <p>
+                                Price: $589.90
+                                <br>Intel® Core Ultra 5
+                                <br>500GB SSD
+                                <br>16GB RAM
+                                <br><button type="button" onclick="addItem(1)" id="addCartBtn" class="addCT">Add to Cart</button>
+                            </p>
+                        </div>
+                        <div class="product">
+                            <img src="../Assets/Images/laptop_latitude_13_3310_gallery_3.avif" alt="Product Img">
+                            <h4>Dell 15 Laptop</h4>
+                            <p>
+                                Price: $290.99
+                                <br>AMD Ryzen™ 5 7520U
+                                <br>512GB SSD
+                                <br>8GB LPDDR5 RAM
+                                <br><button type="button" onclick="addItem(2)" id="addCartBtn" class="addCT">Add to Cart</button>
+                            </p>
+                        </div>
+                        <div class="product">
+                            <img src="../Assets/Images/laptop_latitude_13_3310_gallery_3.avif" alt="Product Img">
+                            <h4>Inspiron 14 2-in-1</h4>
+                            <p>
+                                Price: $499.99
+                                <br>Intel® Core™ i5-1334U
+                                <br>512GB SSD
+                                <br>8GB RAM
+                                <br><button type="button" onclick="addItem(3)" id="addCartBtn" class="addCT">Add to Cart</button>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section id="Desktop">
+                    <h2>Desktops</h2>
+                    <div class="section">
+                        <div class="product">
+                            <img src="../Assets/Images/dell-ecs1250-slim-tower-c-rf-no-ssd-cover-bk.avif" alt="Product Img">
+                            <h4>Dell Slim Desktop</h4>
+                            <p>
+                                Price: $599.99
+                                <br>Intel® Core™ Ultra 5 225
+                                <br>512GB SSD
+                                <br>16GB RAM
+                                <br><button type="button" onclick="addItem(4)" id="addCartBtn" class="addCT">Add to Cart</button>
+                            </p>
+                        </div>
+                        <div class="product">
+                            <img src="../Assets/Images/dell-ect1250-tower-c-rf-bk.avif" alt="Product Img">
+                            <h4>Dell Tower Desktop</h4>
+                            <p>
+                                Price: $749.99 
+                                <br>Intel® Core™ Ultra 7 265
+                                <br>1 TB SSD
+                                <br>32GB RAM
+                                <br><button type="button" onclick="addItem(5)" id="addCartBtn" class="addCT">Add to Cart</button>
+                            </p>
+                        </div>
+                        <div class="product">
+                            <img src="../Assets/Images/dell-ect1250-tower-c-rf-bk.avif" alt="Product Img">
+                            <h4>Dell Tower Desktop</h4>
+                            <p>
+                                Price: $899.99 
+                                <br>Intel® Core™ Ultra 7 265
+                                <br>2 TB SSD
+                                <br>32GB RAM
+                                <br><button type="button" onclick="addItem(6)" id="addCartBtn" class="addCT">Add to Cart</button>
+                            </p>
+                        </div>
+                        <div class="product">
+                            <img src="../Assets/Images/desktop-tower-ebt2250-gray-cart-480-right.avif" alt="Product Img">
+                            <h4>Dell Tower Plus</h4>
+                            <p>
+                                Price: $1,049.99
+                                <br>Intel® Core™ Ultra 7 265
+                                <br>1 TB SSD
+                                <br>16GB RAM
+                                <br><button type="button" onclick="addItem(7)" id="addCartBtn" class="addCT">Add to Cart</button>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script src="app.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

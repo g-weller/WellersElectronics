@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>Weller's Electronics</title>
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" id="navLogin">Sign In</a>
+                <a href="register.html" id="navRegister">Register</a>
+                <a href="cart.html" id="navCart">Cart</a>
+                <a href="#" id="navLogout">Logout</a>
+            </div>
+        </nav>
+        <main class="container">
+            <section class="registerCard">
+                <h3>Register</h3>
+                <form id="register">
+                    <div class="form-row">
+                        <div class="form-line">
+                            <label>First Name</label>
+                            <input type="text" name="firstname" maxlength="55" placeholder="John" required>
+                        </div>
+                        <div class="form-line">
+                            <label>Last Name</label>
+                            <input type="text" name="lastname" maxlength="55" placeholder="Brown" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-line">
+                            <label>Date of Birth</label>
+                            <input type="date" name="dob" required>
+                        </div>
+                        <div class="form-line">
+                            <label>Gender</label>
+                            <input type="text" name="gender" maxlength="7" placeholder="Male" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-line">
+                            <label>Phone Number</label>
+                            <input type="number" name="phone" maxlength="11" placeholder="1-876-555-5555" required>
+                        </div>
+                        <div class="form-line">
+                            <label>Email</label>
+                            <input type="text" name="email" maxlength="30" placeholder="username@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-line">
+                            <label>Tax Registration Number</label>
+                            <input type="text" name="trn" maxlength="12" placeholder="000-000-000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+                        </div>
+                        <div class="form-line">
+                            <label>Password</label>
+                            <input type="password" name="password" minlength="8" maxlength="15" placeholder="Password" required>
+                        </div>
+                    </div>
+
+                    <div class="form-line">
+                        <label>Confirm Password</label>
+                        <input type="password" name="confirmPassword" minlength="8" maxlength="15" placeholder="Password" required>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit" id="registerBtn" class="regButton">Register</button>
+                        <button type="button" onclick="location.href='login.html';" id="loginBtn" class="regButton">Login</button>
+                        <button type="button" id="cancelBtn" class="regButton">Cancel</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <script src="app.js"></script>
+        <script src="register.js"></script>
+    </body>
+</html>
